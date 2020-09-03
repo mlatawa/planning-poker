@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row" style="text-align:center">
+        <div class="col-sm-12">
+           <p>Story Number</p>
+       </div>
+  </div>
+  
+   <div class="row">
+         <div class="col" *ngFor="let number of [1,2,3,4,5]">
+         <button type="button" (click)="onCardClick(number)" class="m-4 px-xl-5 py-xl-5 btn btn-outline-primary btn-lg" >{{number}}</button>
+         </div>
+    </div>
+    <div class="row">
+          <div class="col" *ngFor="let number of [6,7,8,9,10]">
+          <button type="button" (click)="onCardClick(number)" class="m-4 px-xl-5 py-xl-5 btn btn-outline-primary btn-lg">{{number}}</button>
+          </div>
+     </div>
+    <br>
+    <br>
+     <div class="row" style="text-align:center">
+           <div class="col-sm-12">
+              <button type="button" (click)="onSubmitCardButtonClick()"  class="btn btn-outline-primary btn-lg">Submit</button>
+          </div>
+     </div>
+</div>

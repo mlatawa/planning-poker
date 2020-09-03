@@ -1,0 +1,26 @@
+<div class="container">
+
+<div class="row">
+  <div class="col" *ngFor="let result of poker_result">
+   <div class="card " style="width: 10rem;height: 12rem">
+      <h5 class="card-title" style="text-align:center">{{result.name}}</h5>
+      <div class="card-body btn btn-outline-primary" [ngStyle]="{'background-color':!showAllButtonClicked ? 'blue' : 'white'}">
+         <h1 class="card-text" style="text-align:center;color:blue" >{{result.cardValue}}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row"  style="text-align:center">
+  <div class="col-sm-12" >
+    <input type="password"  placeholder="Enter Your Effort" #starterEffort>
+    <button type="button" class="m-4 btn btn-outline-primary btn-lg" (click)="onStartersEffortSubmit(starterEffort)">Submit</button>
+  </div>
+</div>
+<div class="row" style="text-align:center">
+    <div class="col-sm-12" >
+       <button type="button" class="btn btn-outline-primary btn-lg" (click)="onShowAllButtonClick()">Show All</button>
+   </div>
+</div>
+
+</div>

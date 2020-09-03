@@ -1,0 +1,14 @@
+<div class="middleDiv">
+    <form>
+        <div class="form-row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Name"  #inputName>
+          </div>
+          <div class="col">
+            <input type="number" class="form-control" placeholder="Story Number" #storyNumber>
+          </div>
+        </div>
+      </form>
+     <button type="button" (click)="onStartButtonClick(inputName,storyNumber)" class="m-4 btn btn-outline-primary btn-lg">Start</button>
+    <button type="button" (click)="onJoinButtonClick(inputName,storyNumber)" class="m-4 btn btn-outline-primary btn-lg">Join</button>
+</div>
