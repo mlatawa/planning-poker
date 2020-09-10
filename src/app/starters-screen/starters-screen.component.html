@@ -1,4 +1,9 @@
 <div class="container">
+  <div class="row" style="text-align:center">
+    <div class="col-sm-12">
+       <p>Story Number : {{this.joiningInfoService.storyNumber}}</p>
+   </div>
+</div>
 
 <div class="row">
   <div class="col" *ngFor="let result of poker_result">
@@ -13,7 +18,7 @@
 
 <div class="row"  style="text-align:center">
   <div class="col-sm-12" >
-    <input type="password"  placeholder="Enter Your Effort" #starterEffort>
+    <input type="password"  placeholder="1,2,3,5,8,13,21" #starterEffort>
     <button type="button" class="m-4 btn btn-outline-primary btn-lg" (click)="onStartersEffortSubmit(starterEffort)">Submit</button>
   </div>
 </div>

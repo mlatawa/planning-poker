@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WebSocketService } from '../web-socket.service';
 import { JoiningInfoService } from '../joining-info.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-starters-screen',
@@ -15,9 +16,14 @@ export class StartersScreenComponent implements OnInit {
     storyNumber : String,
     name: String
   }[] = [];
-  constructor(private webSocketService:WebSocketService,private joiningInfoService : JoiningInfoService) { }
+  constructor(private router : Router,private webSocketService:WebSocketService,private joiningInfoService : JoiningInfoService) { }
 
   ngOnInit() {
+
+    if(this.joiningInfoService.storyNumber==null || this.joiningInfoService.name == null){
+      this.router.navigate(['']);
+    }
+
        this.webSocketService.listen('new user').subscribe((data)  =>{
        console.log("new user joined from client " + data);
    }); 
