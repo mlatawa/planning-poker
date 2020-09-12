@@ -16,11 +16,11 @@ export class JoinersScreenComponent implements OnInit {
 
   ngOnInit() {
 
-    if(this.joiningInfoService.storyNumber==null || this.joiningInfoService.name == null){
+    if(this.joiningInfoService.storyNumber == null || this.joiningInfoService.name == null
+      || this.joiningInfoService.storyNumber.trim() == "" || this.joiningInfoService.name.trim() == ""){
       this.router.navigate(['']);
     }
-
-  }
+}
 
   onCardClick(number){
     this.currentlySelectedCardValue = number;

@@ -22,10 +22,8 @@ export class HomeScreenComponent implements OnInit {
   }
 
   onJoinButtonClick(inputName : HTMLInputElement,storyNumber : HTMLInputElement){
-   // console.log("new user joined " + inputName.value);
     this.joiningInfoService.name = inputName.value;
-    this.joiningInfoService.storyNumber = storyNumber.value; 
-    this.webSocketService.emit('joined' , inputName.value );
+    this.joiningInfoService.storyNumber = storyNumber.value;
     this.router.navigate(['joiner']);
     
   }
