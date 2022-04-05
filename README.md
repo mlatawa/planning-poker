@@ -29,6 +29,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## After cloning
 
-Run `npm i`  to create node_modules folder
+Run `npm init` and 'nmp install'  to create node_modules folder
 Run `ng serve`  to start client 
 Run  `node socket-io-server.js`  to start server
