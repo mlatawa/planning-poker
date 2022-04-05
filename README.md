@@ -29,6 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## After cloning
 
+Install node from https://nodejs.org/en/download/ . This will also install npm.
 Run `npm init` and 'nmp install'  to create node_modules folder
+Install angular cli using npm install -g @angular/cli (You may have to use sudo)
 Run `ng serve`  to start client 
 Run  `node socket-io-server.js`  to start server
